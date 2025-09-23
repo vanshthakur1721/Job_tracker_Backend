@@ -25,7 +25,7 @@ app.use('/api/v1/job',jobRoutes)
 
 app.use('/api/v1/auth',authRoutes);
 
-app.listen(port, () => {
+app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`)
   console.log(`http://localhost:${PORT}`)
 })
