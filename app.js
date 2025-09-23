@@ -15,7 +15,8 @@ const PORT = process.env.PORT || 3000;
   res.send('Hello World these side vansh!')
 })
  app.use(cors({
-  origin: "http://localhost:5173", // frontend URL
+  origin: ["http://localhost:5173",
+   "https://job-tracker-helper.vercel.app"], // frontend URL
   credentials: true,
     allowedHeaders: ["Content-Type", "Authorization"]
 
