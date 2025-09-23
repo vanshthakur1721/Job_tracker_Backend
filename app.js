@@ -6,7 +6,8 @@
  import cors from 'cors'
  dotenv.config();
  const app = express()
- const port = 3000
+const PORT = process.env.PORT || 3000;
+
  app.use(express.json());
  connectDb();
 
@@ -25,6 +26,6 @@ app.use('/api/v1/job',jobRoutes)
 app.use('/api/v1/auth',authRoutes);
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-  console.log(`http://localhost:${port}`)
+  console.log(`Example app listening on port ${PORT}`)
+  console.log(`http://localhost:${PORT}`)
 })
